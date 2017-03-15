@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+#menu {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#menu li {
+	display: block;
+	width: 12.5%;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#menu li a {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	padding: 12px 0 10px;
+	color: #ffffff;
+	background-color: rgb(122, 171, 249);
+	transition: all .3s;
+}
+
+#menu li a:hover {
+	color: rgb(122, 171, 249);
+	background-color: #ffffff;
+}
+
+#toggle {
+	display: none;
+}
+
+@media only screen and (max-width: 770px), @media only screen and (max-width: 480px) {
+
+	#menu {
+		display: none;
+	}
+
+	#toggle {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 40px;
+		background-color: #446c99;
+	}
+	
+	#toggle p {
+		display: inline;
+		position: relative;
+		top: -12px;
+		margin-left: 40%;
+		font-size: 15px;
+		color: #ffffff;
+	}
+
+	#toggle a {
+		display: block;
+		position: relative;
+		padding: 12px 0 10px;
+		color: #ffffff;
+		text-align: center;
+		text-decoration: none;
+	}
+	
+	#toggle::before {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 10px;
+		width: 40px;
+		height: 40px;
+		margin-top: -10px;
+		background-color: #cee5ff;
+	}
+
+	#toggle a::before, #toggle a::after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 8px;
+		width: 40px;
+		height: 8px;
+		background-color: #222;
+	}
+
+	#toggle a::after {
+    	margin-top: 16px;
+  	}
+}
+
+@media only screen and (max-width: 770px) {
+	#menu li {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	#menu li {
+		width: 100%;
+	}
+}
